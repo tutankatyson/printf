@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:12:32 by jorsanch          #+#    #+#             */
-/*   Updated: 2022/10/05 19:34:54 by jorsanch         ###   ########.fr       */
+/*   Updated: 2022/10/05 22:05:52 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char * ft_fill_left(char *input, char filling, size_t spaces, int plus)
 	
 	if (j < spaces)
 		j = spaces;
-	if (input[i] != '-' && plus != 0 && ft_strlen(input) == spaces)
+	if (input[i] != '-' && plus != 0 && ft_strlen(input) >= spaces)
 		j++;
 
 	str = (char *)malloc((j + 1) * sizeof(char));

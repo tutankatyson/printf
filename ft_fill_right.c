@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:12:32 by jorsanch          #+#    #+#             */
-/*   Updated: 2022/10/05 20:56:35 by jorsanch         ###   ########.fr       */
+/*   Updated: 2022/10/05 22:13:30 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,54 +20,65 @@
 #include "libft.h"
 
 
-char * ft_fill_right(char *input, char filling, int spaces, int plus)
+char * ft_fill_right(char *input, char filling, size_t spaces, int plus)
 {
-	size_t i;							//para movernos por el imput
-	size_t j;							//para movernos por str
-	char	*str;						//El array que vamos a montar y devolver
+	size_t i;
+	size_t j;
+	char	*str;
 
 	i = 0;
 	j = ft_strlen(input);
-	str = NULL; 
+	str = NULL;
 	
 	if (j < spaces)
 		j = spaces;
-	if (input[i] != '-' && plus != 0 && ft_strlen(input) == spaces)
+	if (input[i] != '-' && plus != 0 && ft_strlen(input) >= spaces)
 		j++;
 
 	str = (char *)malloc((j + 1) * sizeof(char));
 	if(!str)
+	{
+		printf("¡ ¡ ¡ f a l l o   e l    m a l l o c ! ! ! ");
 		return (str);
+	}
+
+	//printf("\ninput: %s + %i +/o %zu --malloc: %zu", input, plus, spaces, j+1);
+
 
 	j = 0;
-	if (plus == 1)						//En caso del flag + 		 	plus = 1
-	{									//con el flag "spacio" 			plus = -1
-		if(input[i] != '-')				//Si no es negativo escribe un + en str[0]
-		{
-			str[j] = '+';
-			j++;						//Avanza str para no pisar el +
-		}
+
+	if (input[0] == '-')
+	{
+		i++;
+		str[j] = '-';
+		j++;
+	}
+	else{
+	if (plus == 1)
+	{
+		str[j] = '+';
+		j++;
 	}
 	if (plus == -1)						
-	{									//con el flag "spacio" 			plus = -1
-		if(input[i] != '-')				//Si no es negativo escribe un ' ' en str[0]
-		{
-			str[j] = filling;
-			j++;						//Avanza str para no pisar el +
-		}
+	{
+		str[j] = ' ';
+		j++;
 	}
 
-	while (input[i] !=  '\0')			//Va copiando input en str
+	}
+	while ((j + ft_strlen(input)-1) < spaces)
+	{
+		str[j] = filling;
+		j++;
+	}
+
+	while (input[i] !=  '\0')
 	{
 		str[j] = input[i];
 		i++;
 		j++;
 	}
-	while (j < spaces)					//rellena lo que quede de str con el char filling
-	{
-		str[j] = filling;
-		j++;
-	}
+
 	str[j] = '\0';
 
 	return(str);

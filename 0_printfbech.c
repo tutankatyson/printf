@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 20:25:54 by jorsanch          #+#    #+#             */
-/*   Updated: 2022/10/05 19:48:02 by jorsanch         ###   ########.fr       */
+/*   Updated: 2022/10/05 22:08:13 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,33 +65,56 @@ void printbench()
 
 
 	char *str;
-	str = ft_fill_left("423456789", '0', 15, 1);
+	str = ft_fill_right("0011", '0', 2, -1);
+	str = ft_fill_right("0011", '0', 2, 1);
+	str = ft_fill_right("0011", '0', 2, 0);
+	str = ft_fill_right("0011", '0', 5, -1);
+	str = ft_fill_right("0011", '0', 5, 1);
+	str = ft_fill_right("0011", '0', 5, 0);
+
+
+/*
+	printf("\n\n123456789abcdef");
+	printf("\n%s",ft_fill_right("423456789", '0', 15, 0));printf("EOL");
+	printf("\n%s",ft_fill_right("423456789", '0', 15, -1));printf("EOL");
+	printf("\n%s",ft_fill_right("423456789", '0', 15, 1));printf("EOL");
 
 	printf("\n\n123456789abcdef");
-	printf("\n%s",ft_fill_left("423456789", ' ', 15, 0));printf("EOL");
-	printf("\n%s",ft_fill_left("423456789", ' ', 15, -1));printf("EOL");
-	printf("\n%s",ft_fill_left("423456789", ' ', 15, 1));printf("EOL");
+	printf("\n%s",ft_fill_right("42" ,'0', 4, 0));printf("EOL");
+	printf("\n%s",ft_fill_right("42" ,'0', 4, -1));printf("EOL");
+	printf("\n%s",ft_fill_right("42" ,'0', 4, 1));printf("EOL");
+	printf("\n%s",ft_fill_right("-42",'0', 4, 0));printf("EOL");
+	printf("\n%s",ft_fill_right("-42",'0', 4, -1));printf("EOL");
+	printf("\n%s",ft_fill_right("-42",'0', 4, 1));printf("EOL");
+
+*/
+	printf("\n\n123456789abcdef");
+	printf("\n%s",ft_fill_right("42", '0', 6, 0));printf("EOL");
+	printf("\n%06i\n",42);
+	printf("\n%s",ft_fill_right("42", '0', 6, -1));printf("EOL");
+	printf("\n% 06i\n",42);
+	printf("\n%s",ft_fill_right("42", '0', 6, 1));printf("EOL");
+	printf("\n%+06i\n",42);
+	printf("\n%s",ft_fill_right("-42", '0', 6, 0));printf("EOL");
+	printf("\n%06i\n",-42);
+	printf("\n%s",ft_fill_right("-42", '0', 6, -1));printf("EOL");
+	printf("\n% 06i\n",-42);
+	printf("\n%s",ft_fill_right("-42", '0', 6, 1));printf("EOL");
+	printf("\n%+06i\n",-42);
+/*
+	printf("\n\n123456789abcdef");
+	printf("\n%s",ft_fill_right("42", '0', 6, 0));printf("EOL");
+	printf("\n%s",ft_fill_right("42", '0', 6, -1));printf("EOL");
+	printf("\n%s",ft_fill_right("42", '0', 6, 1));printf("EOL");
+	printf("\n%s",ft_fill_right("-42",'0', 6, 0));printf("EOL");
+	printf("\n%s",ft_fill_right("-42",'0', 6, -1));printf("EOL");
+	printf("\n%s",ft_fill_right("-42",'0', 6, 1));printf("EOL");
 
 	printf("\n\n123456789abcdef");
-	printf("\n%s",ft_fill_left("42", ' ', 4, 0));printf("EOL");
-	printf("\n%s",ft_fill_left("42", ' ', 4, -1));printf("EOL");
-	printf("\n%s",ft_fill_left("42", ' ', 4, 1));printf("EOL");
-	printf("\n%s",ft_fill_left("-42",' ', 4, 0));printf("EOL");
-	printf("\n%s",ft_fill_left("-42",' ', 4, -1));printf("EOL");
-	printf("\n%s",ft_fill_left("-42",' ', 4, 1));printf("EOL");
-
-	printf("\n\n123456789abcdef");
-	printf("\n%s",ft_fill_left("42", ' ', 6, 0));printf("EOL");
-	printf("\n%s",ft_fill_left("42", ' ', 6, -1));printf("EOL");
-	printf("\n%s",ft_fill_left("42", ' ', 6, 1));printf("EOL");
-	printf("\n%s",ft_fill_left("-42",' ',6, 0));printf("EOL");
-	printf("\n%s",ft_fill_left("-42",' ',6, -1));printf("EOL");
-	printf("\n%s",ft_fill_left("-42",' ',6, 1));printf("EOL");
-
-	printf("\n\n123456789abcdef");
-	printf("\n%s",ft_fill_left("11001100", ' ', 4, 0));printf("EOL");
-	printf("\n%s",ft_fill_left("11001100", ' ', 4, -1));printf("EOL");
-	printf("\n%s",ft_fill_left("11001100", ' ', 4, 1));printf("EOL");
+	printf("\n%s",ft_fill_right("11001100", '0', 4, 0));printf("EOL");
+	printf("\n%s",ft_fill_right("11001100", '0', 4, -1));printf("EOL");
+	printf("\n%s",ft_fill_right("11001100", '0', 4, 1));printf("EOL");
 
 
+*/
 }
