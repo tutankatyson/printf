@@ -3,7 +3,7 @@
 //#include "libft.h"
 
 int ft_printf(char *txt,...);
-void printbench(void);
+void printbench();
 
 int	main()
 {
@@ -19,11 +19,12 @@ int	main()
 	n = 0;
 
 	//printf("Hola que \n ase tu");
-	write(1,"Hola que \n ase tu",22);
+	//write(1,"Hola que \n ase tu",22);
 
 
 
-	//printbench();
+
+	printbench();
 	return(0);
 }
 
