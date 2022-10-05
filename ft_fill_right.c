@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:12:32 by jorsanch          #+#    #+#             */
-/*   Updated: 2022/10/05 22:13:30 by jorsanch         ###   ########.fr       */
+/*   Updated: 2022/10/05 22:25:26 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ char * ft_fill_right(char *input, char filling, size_t spaces, int plus)
 	size_t i;
 	size_t j;
 	char	*str;
+	int neg;
 
 	i = 0;
 	j = ft_strlen(input);
 	str = NULL;
+	neg = 0;
 	
 	if (j < spaces)
 		j = spaces;
@@ -52,6 +54,7 @@ char * ft_fill_right(char *input, char filling, size_t spaces, int plus)
 		i++;
 		str[j] = '-';
 		j++;
+		neg =1;
 	}
 	else{
 	if (plus == 1)
@@ -64,14 +67,12 @@ char * ft_fill_right(char *input, char filling, size_t spaces, int plus)
 		str[j] = ' ';
 		j++;
 	}
-
 	}
-	while ((j + ft_strlen(input)-1) < spaces)
+		while ((j + ft_strlen(input) - neg) < spaces)
 	{
 		str[j] = filling;
 		j++;
 	}
-
 	while (input[i] !=  '\0')
 	{
 		str[j] = input[i];
