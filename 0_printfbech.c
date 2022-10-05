@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 20:25:54 by jorsanch          #+#    #+#             */
-/*   Updated: 2022/10/05 13:13:49 by jorsanch         ###   ########.fr       */
+/*   Updated: 2022/10/05 14:00:07 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ void printbench(void)
 
 	printf("\n\n * PRUEBAS DE FORMATO \n");
 
-	printf("\n * Una cadena %0i ",n ,"y otra con argumentos en medio\n");
 	printf("\n * (+) 06i:----->|%06i ",		i);
 	printf("\n * (-) 06i:----->|%06i \n",	in);
 	printf("\n * (+) 6i:------>|%6i ",		i);
