@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:12:32 by jorsanch          #+#    #+#             */
-/*   Updated: 2022/10/05 18:08:10 by jorsanch         ###   ########.fr       */
+/*   Updated: 2022/10/05 20:56:35 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,24 +22,24 @@
 
 char * ft_fill_right(char *input, char filling, int spaces, int plus)
 {
-	int i;								//para movernos por el imput
-	int j;								//para movernos por str
+	size_t i;							//para movernos por el imput
+	size_t j;							//para movernos por str
 	char	*str;						//El array que vamos a montar y devolver
 
 	i = 0;
-	j = 0;
-	str = NULL;
+	j = ft_strlen(input);
+	str = NULL; 
 	
-	if ((int)ft_strlen(input) > spaces)	// Si el input es mayor que lo que tenemos que curbir
-		return (ft_strdup(input));		// Se le hace un malloc con strdup y hemos terminado
-										
-	else
-		str = (char *)malloc(sizeof(char) * (spaces + 1));
-										//Caso contrario creamos un puntero a memoria alocada con el tamaño a cubrir  +1 para el \0 
+	if (j < spaces)
+		j = spaces;
+	if (input[i] != '-' && plus != 0 && ft_strlen(input) == spaces)
+		j++;
+
+	str = (char *)malloc((j + 1) * sizeof(char));
 	if(!str)
-		return NULL;
+		return (str);
 
-
+	j = 0;
 	if (plus == 1)						//En caso del flag + 		 	plus = 1
 	{									//con el flag "spacio" 			plus = -1
 		if(input[i] != '-')				//Si no es negativo escribe un + en str[0]
