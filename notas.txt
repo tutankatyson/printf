@@ -1,0 +1,41 @@
+No se comprueba que el número de marcas en la cadena de formato y 
+el número de parámetros restantes sea consistente. En caso de 
+error, el comportamiento de printf es indeterminado.
+
+n$	Se reemplaza “n” por un número para cambiar el 
+orden en el que se procesan los argumentos. 
+Por ejemplo %3$d se refiere al tercer argumento independientemente 
+del lugar que ocupa en la cadena de formato.
+
+
+Capítulo IV
+Parte bonus
+No es necesario hacer todos los bonus.
+Lista de bonus:
+• Gestiona cualquier combinación de los siguientes flags: 
+	’-0.’ y el ancho mínimo (field minimum width) 
+	bajo todas las conversiones posibles.
+• Gestiona todos los siguientes flags: ’# +’ (sí, uno de ellos es un espacio).
+
+Tienes que implementar las siguientes conversiones:
+• %c Imprime un solo carácter.
+• %s Imprime una string (como se define por defecto en C).
+• %p El puntero void * dado como argumento se imprime en formato hexadecimal.
+• %d Imprime un número decimal (base 10).
+• %i Imprime un entero en base 10.
+• %u Imprime un número decimal (base 10) sin signo.
+• %x Imprime un número hexadecimal (base 16) en minúsculas.
+• %X Imprime un número hexadecimal (base 16) en mayúsculas.
+• % % para imprimir el símbolo del porcentaje.
+
+El prototipo de ft_printf() es:
+int ft_printf(char const *, ...);
+Aquí tienes los requisitos:
+• No implementes la gestión del buffer del printf() original.
+• Deberás implementar las siguientes conversiones: cspdiuxX %
+• Tu función se comparará con el printf() original.
+• Tienes que usar el comando ar para crear tu librería. El uso de libtool command
+is forbidden.
+• Tu archivo libftprintf.a deberá ser creado en la raiz de tu repositorio.
+
+Perfecta

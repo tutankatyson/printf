@@ -4,9 +4,10 @@
 
 # include <stdio.h>
 # include <unistd.h>
-# include "libft.h"
+//# include "libft.h"
 
 char * ft_pointtohex(void *ptr);
+int ft_charcouter(char find, char *str);
 
 
 
