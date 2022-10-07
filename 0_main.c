@@ -1,4 +1,4 @@
-
+/*
 #include "libprint.h"
 //#include "libft.h"
 
@@ -29,3 +29,4 @@ int	main()
 }
 
 
+*/

@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 14:12:32 by jorsanch          #+#    #+#             */
-/*   Updated: 2022/10/05 22:05:52 by jorsanch         ###   ########.fr       */
+/*   Updated: 2022/10/06 17:40:27 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ char * ft_fill_left(char *input, char filling, size_t spaces, int plus)
 	str = (char *)malloc((j + 1) * sizeof(char));
 	if(!str)
 		return (str);
+//	printf("\ninput: %s + %i +/o %zu --malloc: %zu", input, plus, spaces, j+1);
+
 
 	j = 0;
 	if (plus == 1)						//En caso del flag + 		 	plus = 1
