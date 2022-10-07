@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islegal.c                                       :+:      :+:    :+:   */
+/*   1_ft_islegal.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 13:54:36 by jorsanch          #+#    #+#             */
-/*   Updated: 2022/10/07 19:05:45 by jorsanch         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:47:06 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,17 @@ static int ft_flag_legal_cs(char *s)
 	size_t i;
 	int point;
 
-	i = 0;
-	if (!(ft_isdigit(s[i]) || s[i] == '.' || s[i] == '-') || s[i] == '0')
+	i = 1;				printf("\nFlag legal cs:");
+	if (!(ft_isdigit(s[i]) || s[i] == '.' || s[i] == '-'|| ft_checkendchar(s[i])) || s[i] == '0')
+	{
+		printf("\nret 0 1");
 		return (0);
+	}
 	if(s[i] == '.')
+	{
 		i++;
-	point = i;
+		point = 1;
+	}
 	while (s[i] == '-')
 		i++;
 
@@ -39,8 +44,11 @@ static int ft_flag_legal_cs(char *s)
 	{
 		if (s[i] == '.')
 			point++;
-		if (ft_isdigit(s[i]) || s[i] == '.' || point > 1)
+		if ((!ft_isdigit(s[i]) && s[i] != '.' ) || point > 1)
+		{
+			printf("\nretg 0 2 point = %i",point);
 			return (0);
+		}
 		i++;
 	}
 	return (1);
@@ -68,16 +76,17 @@ int ft_islegal(char *s, char c)
  * 			
  * 				
 *******************************************************************************/
-	if (c == 's' || c == 'c')
-		ft_flag_legal_cs(s);
+	if (c == 's' || c == 'c' || c == '%')
+		return(ft_flag_legal_cs(s));
 	
 
 	return (0);
 }
 
-
+/*
 int main()
 {
-	printf("%-50.c--Hola mundo\n",'X');
-	printf("%20.5sHola mundo","Prefacio ");
+	printf("%%--Hola mundo\n");
+	
 }
+*/

@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 20:18:56 by jorsanch          #+#    #+#             */
-/*   Updated: 2022/10/04 21:10:53 by jorsanch         ###   ########.fr       */
+/*   Updated: 2022/10/07 19:43:55 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include "libprint.h"
 
 typedef struct s_list
 {
