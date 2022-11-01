@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 20:25:54 by jorsanch          #+#    #+#             */
-/*   Updated: 2022/10/07 13:18:55 by jorsanch         ###   ########.fr       */
+/*   Updated: 2022/10/10 18:45:20 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void printbench()
 	printf("\n * unsigned:   %u ", u);
 	printf("\n * char:       %c ", c);
 	printf("\n * string:     %s ", s);
-/*
+
 
 	printf("\n\n * FLAGS con int positivo (i) y negativo (in) \n");
 
@@ -174,14 +174,14 @@ void printbench()
 	printf("\n%6i",123456789);printf("EOL*\n");
   
 	
-*/
+
 
 printf("\n\n\n  -  =  *  P R U E B A S   D E   F O R M A T O   S T R I G S *  =  -\n\n");
 	int n;
 	char *s1 = "En un lugar de la mancha de cuyo nombre no quiero acordarme";
 //	char *s2 = "la cosa \n      Est  á \t \v \t    C4bR0|n|@";
 
-/*	
+
 
 	n = printf("\nflag X   hace: %s		\t\t",s1);			printf("%i",n);
 	n = printf("\nflag .   hace: %.s	\t\t",s1);			printf("%i",n);
@@ -199,7 +199,7 @@ printf("\n\n\n  -  =  *  P R U E B A S   D E   F O R M A T O   S T R I G S *  = 
 	n = printf("\nflag 55  hace: %-88s  \t\t",s1);			printf("%i",n);
 
 
-*/
+
 
 	printf("\n\n\n  -  =  A l i n e a m i e n t o   a   i z q u i e r d a  =  -\n\n");
 

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_charcounter.c                                   :+:      :+:    :+:   */
+/*   1_ft_charnonrepitedcounter.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 22:42:39 by jorsanch          #+#    #+#             */
-/*   Updated: 2022/10/03 23:39:37 by jorsanch         ###   ########.fr       */
+/*   Updated: 2022/10/31 21:56:06 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,8 @@ int ft_charnonrepitedcounter(char find, char *str)
 			last = 0;
 		i++;
 	}
+	if (count == 0)
+		count--;
 	return (count);
 }
+

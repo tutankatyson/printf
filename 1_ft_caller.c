@@ -6,7 +6,7 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:16:12 by jorsanch          #+#    #+#             */
-/*   Updated: 2022/10/08 00:03:20 by jorsanch         ###   ########.fr       */
+/*   Updated: 2022/10/11 22:55:59 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ static void ft_flagstring(char *insert)
 	if (ptr)
 		cut = ft_atoi(ptr + 1);										printf("\ncut: %i",cut);				
 	
-	ptr = ft_callerstring("42",cut,fill,left);						//AQUI SE SUSTITUYE ARG MANUALMENRE
+	ptr = ft_callerstring("Hola que ase",cut,fill,left);						//AQUI SE SUSTITUYE ARG MANUALMENRE
 
 }
 static char *ft_callernumbers(char *arg, int cut, int fill, int left, int plus)
@@ -179,22 +179,4 @@ void ft_caller(char *insert)
 	
 	
 
-}
-
-
-int main() 
-{
-//	ft_caller				("%-77c");
-//	printf  ("\nPRINTF  OUT : %-77c:",'x');
-//
-//	ft_caller				("%-77s:");
-//	printf  ("\nPRINTF  OUT : %-77s:", "Hola que ase");
-
-//	ft_caller				("%-77%sigue por aqui:");
-//	printf  ("\nPRINTF  OUT : %-77%sigue por aqui:");
-
-	ft_caller				("%i:");
-	printf  ("\nPRINTF  OUT : %7i:",42);
-
-	return (0);
 }

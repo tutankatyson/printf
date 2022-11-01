@@ -4,5 +4,12 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"libft.h": "c",
+			"libprint.h": "c",
+			"stdarg.h": "c",
+			"stdio.h": "c"
+		}
+	}
 }
