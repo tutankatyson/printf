@@ -6,14 +6,14 @@
 /*   By: jorsanch <jorsanch@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 22:48:17 by jorsanch          #+#    #+#             */
-/*   Updated: 2022/11/01 19:28:16 by jorsanch         ###   ########.fr       */
+/*   Updated: 2022/11/01 19:43:36 by jorsanch         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "tools.h"	
 #include "libft.h"	
-
+#include <stdarg.h>
+#include <stdio.h>
 
 void printbuff(char *str, char *name)
 {
@@ -46,12 +46,6 @@ void printbuff(char *str, char *name)
 	write(1,"$\\0$|",5);
 //	printf("prueba(%zu)",i);
 }
-
-
-#include <stdarg.h>
-
-
-#include <stdio.h>
 
 static int	ft_charnonrepitedcounter(char find, char *str)
 {
@@ -138,6 +132,31 @@ static int	ft_go_writing(char **txt)
 	return (i);									// ----> maybe index-1									
 }
 
+static int ft_fill(char txt)
+{
+	int i = 1;
+
+	while (!ft_isdigit(txt[i]) && txt[i] != '\0')
+		i++;
+	i = ft_atoi(*txt + i);
+
+	return (i);
+}
+
+static int ft_precision(char txt)
+{
+	int i = 1;
+
+	while (txt[i] != '.' && txt[i] !0 '\0') 
+		i++;
+	i++;
+	i = ft_atoi(*txt + i);
+
+	return (i);
+}
+
+
+
 char *ft_get_str(char *arg, int fill, int precision, int alignment)
 {
 	arg = 0;
@@ -147,21 +166,25 @@ char *ft_get_str(char *arg, int fill, int precision, int alignment)
 	return("TOMA TU PUTA STR");
 }
 
+
+
 static int ft_magic_string(char **txt)
 {
-//	int		fill 		=	 0;
-//	int		precision 	=	 0;
-//	int		alignment 	=	 0;
-//	char	*str 		=	 0;
+	int		fill 		=	 0;
+	int		precision 	=	 0;
+	int		alignment 	=	 0;
+	char	*str 		=	 0;
 
-//	fill = ft_fill(*txt);											//TODO
-//	precision = ft_precision(*txt);									//TODO
-//	alignment = ft_alignment(*txt);									//TODO
+	str = ft_substr(*txt, 1, ft_findendchar(*txt));
 
-//	str = ft_get_str(arg, fill, precision, alignment);
+	fill = ft_fill(str);											//TODO
+	precision = ft_precision(str);									//TODO
+	alignment = ft_alignment(str);									//TODO
+
+	str = ft_get_str(arg, fill, precision, alignment);
 	
 											printf(GREEN"MS:%s"RESET,"str");
-//	return (ft_strlen(str));
+	return (ft_strlen(str));
 }
 
 
